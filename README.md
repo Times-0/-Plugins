@@ -27,7 +27,7 @@ MyPlugin = TestPlugin(None)
 
 # Example usgae, with extensibility
 ```py
-om Plugins.IPlugin import IPlugin, IPluginAbstractMeta
+from Plugins.IPlugin import IPlugin, IPluginAbstractMeta
 from Plugins.Abstract import ExtensibleObject
 from Plugins import extend
 from Example import Example
