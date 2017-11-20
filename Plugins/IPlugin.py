@@ -131,9 +131,7 @@ class IPlugin(Abstract):
 
         return super(IPlugin, cls).__new__(cls, engine)
 
-    def __init__(self, engine):
-        self.engine = engine
-
+    def __init__(self, **args, **kwargs):
         self.dependencies = list()
         """
         List of plugin instances current plugin depends upon
@@ -146,7 +144,7 @@ class IPlugin(Abstract):
 
         self.loadDependencies()
 
-        super(IPlugin, self).__init__(self, engine)
+        super(IPlugin, self).__init__(self, *args, **kwargs)
 
     def loadDependencies(self):
         self.dependencies = RequirementsManager.getAllRequirements(self.requirements)
