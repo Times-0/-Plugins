@@ -1,7 +1,6 @@
 # -Plugins
 An extensible, flexible plugin system written in Python
 
-**Anyone except _Zaseth_ can use this**
 
 # Example usage, with requirements
 ```py
